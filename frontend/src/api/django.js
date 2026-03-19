@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const djangoApi = axios.create({
-  baseURL: '/api/django',
+  baseURL: import.meta.env.VITE_DJANGO_API_URL,
 })
 
 djangoApi.interceptors.request.use(config => {

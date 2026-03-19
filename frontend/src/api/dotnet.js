@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const dotnetApi = axios.create({
-  baseURL: '/api/dotnet',
+  baseURL: import.meta.env.VITE_DOTNET_API_URL,
 })
 
 dotnetApi.interceptors.request.use(config => {
