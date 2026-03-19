@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ── Design tokens (RGB channels for Tailwind opacity modifiers) ── */
+:root {
+  --background:        250 250 250;
+  --foreground:        15  23  42;
+  --muted:             241 245 249;
+  --muted-foreground:  100 116 139;
+  --accent:            0   82  255;
+  --accent-secondary:  77  124 255;
+  --accent-foreground: 255 255 255;
+  --border:            226 232 240;
+  --card:              255 255 255;
+  --ring:              0   82  255;
+}
+
+@layer base {
+  body {
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  /* Signature gradient text */
+  .gradient-text {
+    background: linear-gradient(to right, #0052FF, #4D7CFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Signature gradient background */
+  .gradient-bg {
+    background: linear-gradient(135deg, #0052FF, #4D7CFF);
+  }
+
+  /* Subtle dot texture for dark/inverted sections */
+  .dot-pattern {
+    background-image: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px
+    );
+    background-size: 32px 32px;
+  }
+}

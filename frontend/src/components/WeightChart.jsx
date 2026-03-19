@@ -20,8 +20,8 @@ export default function WeightChart({ records, predictions }) {
           type: 'scatter',
           mode: 'lines+markers',
           name: 'Recorded',
-          line: { color: '#3b82f6', width: 2 },
-          marker: { size: 5 },
+          line: { color: '#0052FF', width: 2.5 },
+          marker: { size: 5, color: '#0052FF' },
         },
         {
           x: predDates,
@@ -29,20 +29,34 @@ export default function WeightChart({ records, predictions }) {
           type: 'scatter',
           mode: 'lines+markers',
           name: '7-day forecast',
-          line: { color: '#ef4444', dash: 'dash', width: 2 },
-          marker: { size: 5, symbol: 'diamond' },
+          line: { color: '#4D7CFF', dash: 'dot', width: 2 },
+          marker: { size: 5, symbol: 'diamond', color: '#4D7CFF' },
         },
       ]}
       layout={{
-        title: { text: 'Weight Trend & Forecast', font: { size: 15 } },
-        xaxis: { title: 'Date' },
-        yaxis: { title: 'Weight (kg)' },
-        legend: { orientation: 'h', y: -0.2 },
-        margin: { t: 50, r: 20, b: 60, l: 60 },
+        font: { family: 'Inter, system-ui, sans-serif', size: 12, color: '#64748B' },
+        xaxis: {
+          title: { text: 'Date', font: { size: 12 } },
+          gridcolor: '#F1F5F9',
+          linecolor: '#E2E8F0',
+          tickfont: { size: 11, color: '#94A3B8' },
+          showgrid: true,
+          zeroline: false,
+        },
+        yaxis: {
+          title: { text: 'Weight (kg)', font: { size: 12 } },
+          gridcolor: '#F1F5F9',
+          linecolor: '#E2E8F0',
+          tickfont: { size: 11, color: '#94A3B8' },
+          showgrid: true,
+          zeroline: false,
+        },
+        legend: { orientation: 'h', y: -0.28, font: { size: 12 } },
+        margin: { t: 16, r: 20, b: 72, l: 56 },
         paper_bgcolor: 'transparent',
         plot_bgcolor: 'transparent',
       }}
-      style={{ width: '100%', height: '360px' }}
+      style={{ width: '100%', height: '340px' }}
       config={{ responsive: true, displayModeBar: false }}
     />
   )

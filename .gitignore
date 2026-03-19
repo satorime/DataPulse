@@ -1,0 +1,79 @@
+# ========================
+# .NET
+# ========================
+dotnet-api/**/bin/
+dotnet-api/**/obj/
+dotnet-api/**/*.user
+dotnet-api/**/*.suo
+**/.vs/
+dotnet-api/**/appsettings.Development.json
+dotnet-api/**/appsettings.Local.json
+dotnet-api/**/publish/
+dotnet-api/**/*.nupkg
+
+# ========================
+# Python / Django
+# ========================
+django-api/__pycache__/
+django-api/**/__pycache__/
+django-api/**/*.pyc
+django-api/**/*.pyo
+django-api/.env
+django-api/venv/
+django-api/.venv/
+django-api/*.egg-info/
+django-api/staticfiles/
+django-api/media/
+
+# ========================
+# React / Node
+# ========================
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+
+# ========================
+# Docker
+# ========================
+docker-compose.override.yml
+
+# ========================
+# Database
+# ========================
+*.sqlite3
+*.db
+
+# ========================
+# Secrets (never commit these)
+# ========================
+.env
+.env.*
+!.env.example
+**/appsettings.Production.json
+*.pfx
+*.p12
+*.pem
+*.key
+
+# ========================
+# Logs
+# ========================
+*.log
+logs/
+
+# ========================
+# OS
+# ========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========================
+# IDEs
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
